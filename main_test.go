@@ -15,7 +15,7 @@ func Test_sum(t *testing.T) {
 		{
 			name: "Test 1",
 			args: args{a: 5, b: 5},
-			want: 12,
+			want: 10,
 		},
 	}
 	for _, tt := range tests {
