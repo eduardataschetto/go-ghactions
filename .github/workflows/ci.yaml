@@ -19,6 +19,12 @@ jobs:
       - name: Run tests
         run: go test -coverprofile=coverage.out -v ./...
 
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
       - name: Run
         run: go run main.go
 
