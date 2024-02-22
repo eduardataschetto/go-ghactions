@@ -2,7 +2,7 @@ package main
 
 import "testing"
 
-func Test_sum(t *testing.T) {
+func TestSum(t *testing.T) {
 	type args struct {
 		a int
 		b int
